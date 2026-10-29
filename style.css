@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+/* Header */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 30px 8%;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #d1d5db;
+}
+
+/* Main */
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* Sections */
+
+.form-section,
+.applications-section {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.form-section h2,
+.applications-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    grid-column: 1 / -1;
+    resize: vertical;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input {
+    flex: 1;
+}
+
+.filters select {
+    width: 200px;
+}
+
+/* Applications */
+
+.application-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.application-card h3 {
+    margin-bottom: 6px;
+}
+
+.application-info {
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        grid-column: auto;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+}

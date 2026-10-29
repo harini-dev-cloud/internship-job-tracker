@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Internship & Job Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Internship & Job Tracker</h1>
+
+        <p>
+            Track your internships and job applications in one place.
+        </p>
+    </header>
+
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Applications</h3>
+                <h2 id="totalApplications">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Applied</h3>
+                <h2 id="appliedCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Shortlisted</h3>
+                <h2 id="shortlistedCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Interview</h3>
+                <h2 id="interviewCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Selected</h3>
+                <h2 id="selectedCount">0</h2>
+            </div>
+
+        </section>
+
+
+        <section class="form-section">
+
+            <h2>Add Application</h2>
+
+            <form id="applicationForm">
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Job Role"
+                    required
+                >
+
+                <select id="type">
+
+                    <option value="Internship">
+                        Internship
+                    </option>
+
+                    <option value="Job">
+                        Job
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location"
+                >
+
+
+                <input
+                    type="date"
+                    id="appliedDate"
+                    required
+                >
+
+
+                <select id="status">
+
+                    <option value="Applied">
+                        Applied
+                    </option>
+
+                    <option value="Shortlisted">
+                        Shortlisted
+                    </option>
+
+                    <option value="Interview">
+                        Interview
+                    </option>
+
+                    <option value="Selected">
+                        Selected
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="url"
+                    id="jobLink"
+                    placeholder="Job Link"
+                >
+
+
+                <textarea
+                    id="notes"
+                    placeholder="Notes"
+                ></textarea>
+
+
+                <button type="submit">
+                    Add Application
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="applications-section">
+
+            <h2>My Applications</h2>
+
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search company or role..."
+                >
+
+
+                <select id="filterStatus">
+
+                    <option value="All">
+                        All Status
+                    </option>
+
+                    <option value="Applied">
+                        Applied
+                    </option>
+
+                    <option value="Shortlisted">
+                        Shortlisted
+                    </option>
+
+                    <option value="Interview">
+                        Interview
+                    </option>
+
+                    <option value="Selected">
+                        Selected
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="applicationList">
+
+                <p>No applications yet.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
